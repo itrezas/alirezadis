@@ -34,7 +34,9 @@ namespace MainAliReza.FrontEnd
 
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
-
+            /////    استفاده کنم؟؟؟؟؟؟؟؟PUK چطوری از تابع  
+            string[] puk;
+            puk = PUK();//؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟
         }
     }
 }
