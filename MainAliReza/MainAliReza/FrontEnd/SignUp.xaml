@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="MainAliReza.FrontEnd.SignUp"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MainAliReza.FrontEnd"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Button x:Name="Sign_Up" Content="sign up" HorizontalAlignment="Left" Height="60" Margin="180,353,0,0" VerticalAlignment="Top" Width="216" Click="Btn_Click"/>
+        <TextBlock x:Name="Fn" Background="White" HorizontalAlignment="Left" Height="53" Margin="50,116,0,0" TextWrapping="Wrap" Text="fn" VerticalAlignment="Top" Width="160"/>
+        <TextBlock x:Name="Ln" Background="White" HorizontalAlignment="Left" Height="53" Margin="283,116,0,0" TextWrapping="Wrap" Text="ln" VerticalAlignment="Top" Width="160"/>
+        <TextBlock x:Name="Brtd" Background="White" HorizontalAlignment="Left" Height="53" Margin="545,116,0,0" TextWrapping="Wrap" Text="brtd" VerticalAlignment="Top" Width="160"/>
+        <TextBlock x:Name="Brtm" Background="White" HorizontalAlignment="Left" Height="53" Margin="50,174,0,0" TextWrapping="Wrap" Text="brtm" VerticalAlignment="Top" Width="160"/>
+        <TextBlock x:Name="Brty" Background="White" HorizontalAlignment="Left" Height="53" Margin="283,174,0,0" TextWrapping="Wrap" Text="brty" VerticalAlignment="Top" Width="160"/>
+        <TextBlock x:Name="Email" Background="White" HorizontalAlignment="Left" Height="53" Margin="545,174,0,0" TextWrapping="Wrap" Text="e_mail" VerticalAlignment="Top" Width="160"/>
+        <TextBlock x:Name="Mobil" Background="White" HorizontalAlignment="Left" Height="53" Margin="50,232,0,0" TextWrapping="Wrap" Text="mobil" VerticalAlignment="Top" Width="160"/>
+        <TextBlock x:Name="Telephone" Background="White" HorizontalAlignment="Left" Height="53" Margin="283,232,0,0" TextWrapping="Wrap" Text="telephone" VerticalAlignment="Top" Width="160"/>
+        <TextBlock x:Name="Gender" Background="White" HorizontalAlignment="Left" Height="53" Margin="545,232,0,0" TextWrapping="Wrap" Text="gender" VerticalAlignment="Top" Width="160"/>
+        <TextBlock x:Name="Picture" Background="White" HorizontalAlignment="Left" Height="53" Margin="50,290,0,0" TextWrapping="Wrap" Text="picture" VerticalAlignment="Top" Width="160"/>
+        <TextBlock x:Name="Username" Background="White" HorizontalAlignment="Left" Height="53" Margin="283,290,0,0" TextWrapping="Wrap" Text="username" VerticalAlignment="Top" Width="160"/>
+        <TextBlock x:Name="Password" Background="White" HorizontalAlignment="Left" Height="53" Margin="545,290,0,0" TextWrapping="Wrap" Text="password" VerticalAlignment="Top" Width="160"/>
+
+    </Grid>
+</UserControl>
