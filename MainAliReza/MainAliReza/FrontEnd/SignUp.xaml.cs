@@ -21,9 +21,12 @@ namespace MainAliReza.FrontEnd
     /// </summary>
     public partial class SignUp : UserControl
     {
+        public string[] sed { get; set; }
         public SignUp()
         {
             InitializeComponent();
+
+            sed = new string[] { "خریدار", "مدیر" };
         }
         public void signupchecker()
         {
@@ -40,8 +43,10 @@ namespace MainAliReza.FrontEnd
             SU.Add(Picture.Text);
             SU.Add(Username.Text);
             SU.Add(Password.Text);
-
-
+            if (SED.Text == "خریدار")
+                SU.Add("1");
+            if (SED.Text == "مدیر")
+                SU.Add("0");
 
 
             Person2 person2 = new Person2();
@@ -50,6 +55,11 @@ namespace MainAliReza.FrontEnd
         public void Btn_Click(object sender, RoutedEventArgs e)
         {
             signupchecker();
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
