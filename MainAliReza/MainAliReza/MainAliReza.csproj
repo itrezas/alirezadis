@@ -157,6 +157,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="BackEnd\ConnectingDB.cs" />
+    <Compile Include="BackEnd\DBController.cs" />
     <Compile Include="BackEnd\Person.cs" />
     <Compile Include="BackEnd\Person2.cs" />
     <Compile Include="BackEnd\Product.cs" />

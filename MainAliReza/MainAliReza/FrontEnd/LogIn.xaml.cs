@@ -28,33 +28,15 @@ namespace MainAliReza.FrontEnd
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            try
+            DBController dBController = new DBController();
+            if (dBController.Checklogin(username.Text, password.Password)) 
             {
 
-                using (var db = new ConnectingDB())
-                {
-                    var SignIn = from SI in db.person1
-                                 select SI;
-                    foreach (var i in SignIn)
-                    {
-                        if (i.UserName == username.Text)
-                        {
-                            if (i.PassWord == password.Password)
-                                MessageBox.Show("Log IN");
-                        }
-
-
-                    }
-                }
-
             }
-            catch(ValueUnavailableException)
+            else
             {
-                MessageBox.Show("NO");
+
             }
-
-
-
         }
     }
 }
