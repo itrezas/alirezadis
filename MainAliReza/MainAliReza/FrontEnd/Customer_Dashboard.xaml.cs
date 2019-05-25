@@ -20,9 +20,21 @@ namespace MainAliReza.FrontEnd
     /// </summary>
     public partial class Customer_Dashboard : UserControl
     {
+        public static string[] PUK(string un,string pw)
+        {
+            string[] pukeeper = new string[] { un, pw };
+            return pukeeper;
+        }
+        
+
         public Customer_Dashboard()
         {
             InitializeComponent();
+        }
+
+        private void Edit_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

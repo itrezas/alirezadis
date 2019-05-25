@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Button x:Name="Edit" Content="edit" HorizontalAlignment="Left" Height="75" Margin="271,81,0,0" VerticalAlignment="Top" Width="152"/>
+        <Button x:Name="Edit" Content="edit" HorizontalAlignment="Left" Height="75" Margin="271,81,0,0" VerticalAlignment="Top" Width="152" Click="Edit_Click"/>
 
     </Grid>
 </UserControl>

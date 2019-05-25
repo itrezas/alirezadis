@@ -42,7 +42,7 @@ namespace MainAliReza.FrontEnd
             SU.Add(Gender.Text);
             SU.Add(Picture.Text);
             SU.Add(Username.Text);
-            SU.Add(Password.Text);
+            SU.Add(PassWord.Password);
             if (SED.Text == "خریدار")
                 SU.Add("1");
             if (SED.Text == "مدیر")
