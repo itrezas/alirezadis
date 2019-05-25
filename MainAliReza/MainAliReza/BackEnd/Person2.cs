@@ -16,7 +16,9 @@ namespace MainAliReza.BackEnd
                 { FirstName = firstname, LastName = lastname, Birthday_Day = birthday_day, Birthday_Month = birthday_month, Birthday_Year = birthday_year, E_Mail = e_mail, Gender = gender, Mobil = mobil, PassWord = password, UserName = username, Sath_E_Dastresy = sath_e_dastresy, Picture = picture, Telephon = telephon };
 
                 db01.person1.Add(per);
+                db01.SaveChanges();
             }
         }
+        public void
     }
 }
