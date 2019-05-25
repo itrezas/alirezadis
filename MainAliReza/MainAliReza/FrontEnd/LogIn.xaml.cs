@@ -21,11 +21,11 @@ namespace MainAliReza.FrontEnd
     /// </summary>
     public partial class LogIn : UserControl
     {
-        public string[] PUP()
-        {
-            string[] arr = new string[] { username.Text, password.Password };
-            return arr;
-        }
+        //public string[] PUP()
+        //{
+        //    string[] arr = new string[] { username.Text, password.Password };
+        //    return arr;
+        //}
         public LogIn()
         {
             InitializeComponent();
@@ -36,7 +36,7 @@ namespace MainAliReza.FrontEnd
             DBController dBController = new DBController();
             if (dBController.Checklogin(username.Text, password.Password)) 
             {
-                Customer_Dashboard
+                Customer_Dashboard.PUK(username.Text, password.Password);
 
 
             }
