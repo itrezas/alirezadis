@@ -26,5 +26,15 @@ namespace MainAliReza.BackEnd
                 return false;
             }
         }
+        public List<Person> Return_Info_DB(string u,string p)
+        {
+            var db02 = new ConnectingDB();
+            var res1 = db02.person1.Where(j => j.UserName == u && j.PassWord == p).FirstOrDefault();
+            List<Person> people = new List<Person>();
+            people.Add(res1);
+            return people;
+            
+            
+        }
     }
 }

@@ -20,12 +20,9 @@ namespace MainAliReza.FrontEnd
     /// </summary>
     public partial class Customer_Dashboard : UserControl
     {
-        public static string[] PUK(string un,string pw)
-        {
-            string[] pukeeper = new string[] { un, pw };
-            return pukeeper;
-        }
-        
+        static string username;
+        static string password;
+
 
         public Customer_Dashboard()
         {
@@ -37,6 +34,8 @@ namespace MainAliReza.FrontEnd
             /////    استفاده کنم؟؟؟؟؟؟؟؟PUK چطوری از تابع  
             string[] puk;
             puk = PUK();//؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟
+
+
         }
     }
 }

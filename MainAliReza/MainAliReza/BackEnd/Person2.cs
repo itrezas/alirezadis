@@ -11,7 +11,6 @@ namespace MainAliReza.BackEnd
     {
         public void Add_Person(List<string>pp)
         {
-            //SignUp signUp = new SignUp();
             using (var db01 = new ConnectingDB())
             {
                 Person per = new Person
@@ -22,6 +21,10 @@ namespace MainAliReza.BackEnd
             }
         }
         public void Edit_Person()
+        {
+
+        }
+        public void Delete_Person()
         {
 
         }
