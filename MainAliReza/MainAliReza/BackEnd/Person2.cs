@@ -20,9 +20,31 @@ namespace MainAliReza.BackEnd
                 db01.SaveChanges();
             }
         }
-        public void Edit_Person()
+        public void Edit_Person(List<string> qq,string Old_Username,string Old_Password)
         {
+            using (ConnectingDB connecting = new ConnectingDB())
+            {
+                var ss = connecting.person1.Where(k => k.UserName == Old_Username && k.PassWord == Old_Password).FirstOrDefault();
+                ss.FirstName = qq[0];
+                ss.LastName = qq[1];
+                ss.Birthday_Day = qq[2];
+                ss.Birthday_Month = qq[3];
+                ss.Birthday_Year = qq[4];
+                ss.E_Mail = qq[5];
+                ss.Mobil = qq[6];
+                ss.Telephon = qq[7];
+                ss.Gender = qq[8];
+                ss.Picture = qq[9];
+                ss.UserName = qq[10];
+                ss.PassWord = qq[11];
+                ss.Sath_E_Dastresy = qq[12];
 
+                connecting.person1.Attach(ss);
+                connecting.Entry(ss);
+                connecting.SaveChanges();
+               
+            }
+          
         }
         public void Delete_Person()
         {

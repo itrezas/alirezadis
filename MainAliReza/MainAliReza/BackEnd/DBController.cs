@@ -33,8 +33,6 @@ namespace MainAliReza.BackEnd
             List<Person> people = new List<Person>();
             people.Add(res1);
             return people;
-            
-            
         }
     }
 }
