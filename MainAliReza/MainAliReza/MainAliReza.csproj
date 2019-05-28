@@ -148,6 +148,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="FrontEnd\Customer_Edit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="FrontEnd\LogIn.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -171,6 +175,9 @@
     <Compile Include="BackEnd\Product.cs" />
     <Compile Include="FrontEnd\Customer_Dashboard.xaml.cs">
       <DependentUpon>Customer_Dashboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Customer_Edit.xaml.cs">
+      <DependentUpon>Customer_Edit.xaml</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\LogIn.xaml.cs">
       <DependentUpon>LogIn.xaml</DependentUpon>

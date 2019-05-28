@@ -45,8 +45,8 @@ namespace MainAliReza.FrontEnd
 
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
-           
-
+            Customer_Edit customer_Edit = new Customer_Edit(userName, passWord);
+            
 
         }
     }
