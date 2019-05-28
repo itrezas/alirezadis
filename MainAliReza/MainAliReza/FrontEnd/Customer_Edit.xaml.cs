@@ -63,6 +63,13 @@ namespace MainAliReza.FrontEnd
             vs.Add(S_E_D.Text);
             Person2 person2 = new Person2();
             person2.Edit_Person(vs, OLD_Username, OLD_Password);
+
+            OLD_Username = USERNAME.Text;
+            OLD_Password = PASSWORD.Password;
+
+            Customer_Dashboard customer_Dashboard = new Customer_Dashboard(USERNAME.Text, PASSWORD.Password);
+
+
         }
     }
 }
