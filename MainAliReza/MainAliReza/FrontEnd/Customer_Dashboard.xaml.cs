@@ -20,20 +20,32 @@ namespace MainAliReza.FrontEnd
     /// </summary>
     public partial class Customer_Dashboard : UserControl
     {
-        static string username;
-        static string password;
+        private string USERNAME;
+
+        public string userName
+        {
+            get { return USERNAME; }
+            set { USERNAME = value; }
+        }
+        private string PASSWORD;
+
+        public string passWord
+        {
+            get { return PASSWORD; }
+            set { PASSWORD = value; }
+        }
 
 
-        public Customer_Dashboard()
+        public Customer_Dashboard(string us,string pw)
         {
             InitializeComponent();
+            userName = us;
+            passWord = pw;
         }
 
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
-            /////    استفاده کنم؟؟؟؟؟؟؟؟PUK چطوری از تابع  
-            string[] puk;
-            puk = PUK();//؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟؟
+           
 
 
         }

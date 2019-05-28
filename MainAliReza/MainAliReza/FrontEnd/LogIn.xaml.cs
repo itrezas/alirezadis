@@ -34,10 +34,22 @@ namespace MainAliReza.FrontEnd
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             DBController dBController = new DBController();
-            if (dBController.Checklogin(username.Text, password.Password)) 
+
+            if (dBController.Checklogin_Customer(username.Text, password.Password)) 
             {
-                Customer_Dashboard.PUK(username.Text, password.Password);
                 
+                
+
+            }
+            else
+            {
+
+            }
+
+            if (dBController.Checklogin_Admin(username.Text,password.Password))
+            {
+
+
 
             }
             else
