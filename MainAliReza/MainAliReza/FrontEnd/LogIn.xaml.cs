@@ -37,7 +37,7 @@ namespace MainAliReza.FrontEnd
 
             if (dBController.Checklogin_Customer(username.Text, password.Password)) 
             {
-                
+                Customer_Dashboard customer_Dashboard = new Customer_Dashboard(username.Text, password.Password);
                 
 
             }
