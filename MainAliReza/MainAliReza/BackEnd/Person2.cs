@@ -42,7 +42,7 @@ namespace MainAliReza.BackEnd
                 connecting.person1.Attach(ss);
                 connecting.Entry(ss);
                 connecting.SaveChanges();
-               
+
             }
           
         }
