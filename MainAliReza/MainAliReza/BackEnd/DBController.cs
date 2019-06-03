@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MainAliReza.BackEnd
 {
-    class DBController
+    public class DBController
     {
         public bool Checklogin_Customer(string user,string pass)
         {
