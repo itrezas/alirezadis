@@ -33,11 +33,11 @@ namespace MainAliReza.BackEnd
                 ss.E_Mail = qq[5];
                 ss.Mobil = qq[6];
                 ss.Telephon = qq[7];
-                ss.Gender = qq[8];
-                ss.Picture = qq[9];
+                ss.Gender = qq[9];
+                ss.Picture = qq[12];
                 ss.UserName = qq[10];
                 ss.PassWord = qq[11];
-                ss.Sath_E_Dastresy = qq[12];
+                ss.Sath_E_Dastresy = qq[8];
 
                 connecting.person1.Attach(ss);
                 connecting.Entry(ss);
