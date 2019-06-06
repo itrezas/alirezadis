@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MainAliReza.FrontEnd;
 
 namespace MainAliReza.BackEnd
 {
     public class Person2
     {
-        public void Add_Person(List<string>pp)
+
+        DBController dBController = new DBController();
+
+        public void Add_Person(List<string> pp)
         {
             using (var db01 = new ConnectingDB())
             {
@@ -20,40 +22,55 @@ namespace MainAliReza.BackEnd
                 db01.SaveChanges();
             }
         }
-        public void Edit_Person(List<string> qq,string Old_Username,string Old_Password)
+        public void Edit_Person(List<string> qq, string Old_Username, string Old_Password)
         {
-            using (ConnectingDB connecting = new ConnectingDB())
+            if(dBController.Checklogin_Admin(Old_Username,Old_Password)||dBController.Checklogin_Customer(Old_Username,Old_Password))
             {
-                var ss = connecting.person1.Where(k => k.UserName == Old_Username && k.PassWord == Old_Password).FirstOrDefault();
-                ss.FirstName = qq[0];
-                ss.LastName = qq[1];
-                ss.Birthday_Day = qq[2];
-                ss.Birthday_Month = qq[3];
-                ss.Birthday_Year = qq[4];
-                ss.E_Mail = qq[5];
-                ss.Mobil = qq[6];
-                ss.Telephon = qq[7];
-                ss.Gender = qq[9];
-                ss.Picture = qq[12];
-                ss.UserName = qq[10];
-                ss.PassWord = qq[11];
-                ss.Sath_E_Dastresy = qq[8];
+                using (ConnectingDB connecting = new ConnectingDB())
+                {
+                    var ss = connecting.person1.Where(k => k.UserName == Old_Username && k.PassWord == Old_Password).FirstOrDefault();
+                    ss.FirstName = qq[0];
+                    ss.LastName = qq[1];
+                    ss.Birthday_Day = qq[2];
+                    ss.Birthday_Month = qq[3];
+                    ss.Birthday_Year = qq[4];
+                    ss.E_Mail = qq[5];
+                    ss.Mobil = qq[6];
+                    ss.Telephon = qq[7];
+                    ss.Gender = qq[9];
+                    ss.Picture = qq[12];
+                    ss.UserName = qq[10];
+                    ss.PassWord = qq[11];
+                    ss.Sath_E_Dastresy = qq[8];
 
-                connecting.person1.Attach(ss);
-                connecting.Entry(ss);
-                connecting.SaveChanges();
+                    connecting.person1.Attach(ss);
+                    connecting.Entry(ss);
+                    connecting.SaveChanges();
 
+                }
             }
-          
+
+            
+
         }
-        public void Delete_Person(string us,string ps)
+        public void Delete_Person(string us, string ps)
         {
-            using (var db02 = new ConnectingDB())
-            {
-                var tt = db02.person1.Where(a => a.UserName == us && a.PassWord == ps).FirstOrDefault();
 
+            if(dBController.Checklogin_Admin(us,ps)||dBController.Checklogin_Customer(us,ps))
+            {
+                using (var db02 = new ConnectingDB())
+                {
+                    var tt = db02.person1.Where(a => a.UserName == us && a.PassWord == ps).FirstOrDefault();
+
+                    db02.person1.Remove(tt);
+                    db02.SaveChanges();
+
+                }
             }
+
+
+
         }
-        
+
     }
 }
