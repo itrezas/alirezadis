@@ -23,15 +23,31 @@ namespace MainAliReza.BackEnd
             }
         }
 
-        public void Add_Person_Customer(List<string> pp)
+        public void Add_Person_FirstAdmin_And_Customers(List<string> pp)
         {
+            
             using (var db01 = new ConnectingDB())
             {
-                Person per = new Person
-                { FirstName = pp[0], LastName = pp[1], Birthday_Day = pp[2], Birthday_Month = pp[3], Birthday_Year = pp[4], E_Mail = pp[5], Gender = pp[9], Mobil = pp[6], PassWord = pp[11], UserName = pp[10], Picture = pp[12], Telephon = pp[7], Sath_E_Dastresy = "1" };
+                //first person add (as admin):
+                Person p = db01.person1.First();
+                if(p==null)
+                {
+                    Person per = new Person
+                    { FirstName = pp[0], LastName = pp[1], Birthday_Day = pp[2], Birthday_Month = pp[3], Birthday_Year = pp[4], E_Mail = pp[5], Gender = pp[9], Mobil = pp[6], PassWord = pp[11], UserName = pp[10], Picture = pp[12], Telephon = pp[7], Sath_E_Dastresy = "0" };
 
-                db01.person1.Add(per);
-                db01.SaveChanges();
+                    db01.person1.Add(per);
+                    db01.SaveChanges();
+                }
+                //other person add(as customer)
+                else if(p!=null)
+                {
+                    Person per = new Person
+                    { FirstName = pp[0], LastName = pp[1], Birthday_Day = pp[2], Birthday_Month = pp[3], Birthday_Year = pp[4], E_Mail = pp[5], Gender = pp[9], Mobil = pp[6], PassWord = pp[11], UserName = pp[10], Picture = pp[12], Telephon = pp[7], Sath_E_Dastresy = "1" };
+
+                    db01.person1.Add(per);
+                    db01.SaveChanges();
+                }
+                
             }
         }
 
