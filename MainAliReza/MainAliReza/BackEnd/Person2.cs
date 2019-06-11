@@ -11,7 +11,7 @@ namespace MainAliReza.BackEnd
 
         DBController dBController = new DBController();
 
-        public void Add_Person_Admin(List<string> pp)
+        public void Add_Person_ByAdmin(List<string> pp)
         {
             using (var db01 = new ConnectingDB())
             {
@@ -37,31 +37,42 @@ namespace MainAliReza.BackEnd
 
         public void Edit_Person_ByCustomer(List<string> qq, string Old_Username, string Old_Password)
         {
-            if(dBController.Checklogin_Customer(Old_Username,Old_Password))
+            try
             {
-                using (ConnectingDB connecting = new ConnectingDB())
+                if (dBController.Checklogin_Customer(Old_Username, Old_Password))
                 {
-                    var ss = connecting.person1.Where(k => k.UserName == Old_Username && k.PassWord == Old_Password).FirstOrDefault();
-                    ss.FirstName = qq[0];
-                    ss.LastName = qq[1];
-                    ss.Birthday_Day = qq[2];
-                    ss.Birthday_Month = qq[3];
-                    ss.Birthday_Year = qq[4];
-                    ss.E_Mail = qq[5];
-                    ss.Mobil = qq[6];
-                    ss.Telephon = qq[7];
-                    ss.Gender = qq[9];
-                    ss.Picture = qq[12];
-                    ss.UserName = qq[10];
-                    ss.PassWord = qq[11];
-                    ss.Sath_E_Dastresy = "1";
+                    using (ConnectingDB connecting = new ConnectingDB())
+                    {
+                        var ss = connecting.person1.Where(k => k.UserName == Old_Username && k.PassWord == Old_Password).FirstOrDefault();
+                        ss.FirstName = qq[0];
+                        ss.LastName = qq[1];
+                        ss.Birthday_Day = qq[2];
+                        ss.Birthday_Month = qq[3];
+                        ss.Birthday_Year = qq[4];
+                        ss.E_Mail = qq[5];
+                        ss.Mobil = qq[6];
+                        ss.Telephon = qq[7];
+                        ss.Gender = qq[9];
+                        ss.Picture = qq[12];
+                        ss.UserName = qq[10];
+                        ss.PassWord = qq[11];
+                        ss.Sath_E_Dastresy = "1";
 
-                    connecting.person1.Attach(ss);
-                    connecting.Entry(ss);
-                    connecting.SaveChanges();
+                        connecting.person1.Attach(ss);
+                        connecting.Entry(ss);
+                        connecting.SaveChanges();
 
+                    }
                 }
+                else
+                    throw new Exception();
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
 
             
 
@@ -69,31 +80,42 @@ namespace MainAliReza.BackEnd
 
         public void Edit_Person_ByAdmin(List<string> qq, string Old_Username, string Old_Password)
         {
-            if (dBController.Checklogin_Admin(Old_Username, Old_Password))
+            try
             {
-                using (ConnectingDB connecting = new ConnectingDB())
+                if (dBController.Checklogin_Admin(Old_Username, Old_Password))
                 {
-                    var ss = connecting.person1.Where(k => k.UserName == Old_Username && k.PassWord == Old_Password).FirstOrDefault();
-                    ss.FirstName = qq[0];
-                    ss.LastName = qq[1];
-                    ss.Birthday_Day = qq[2];
-                    ss.Birthday_Month = qq[3];
-                    ss.Birthday_Year = qq[4];
-                    ss.E_Mail = qq[5];
-                    ss.Mobil = qq[6];
-                    ss.Telephon = qq[7];
-                    ss.Gender = qq[9];
-                    ss.Picture = qq[12];
-                    ss.UserName = qq[10];
-                    ss.PassWord = qq[11];
-                    ss.Sath_E_Dastresy = qq[8];
+                    using (ConnectingDB connecting = new ConnectingDB())
+                    {
+                        var ss = connecting.person1.Where(k => k.UserName == Old_Username && k.PassWord == Old_Password).FirstOrDefault();
+                        ss.FirstName = qq[0];
+                        ss.LastName = qq[1];
+                        ss.Birthday_Day = qq[2];
+                        ss.Birthday_Month = qq[3];
+                        ss.Birthday_Year = qq[4];
+                        ss.E_Mail = qq[5];
+                        ss.Mobil = qq[6];
+                        ss.Telephon = qq[7];
+                        ss.Gender = qq[9];
+                        ss.Picture = qq[12];
+                        ss.UserName = qq[10];
+                        ss.PassWord = qq[11];
+                        ss.Sath_E_Dastresy = qq[8];
 
-                    connecting.person1.Attach(ss);
-                    connecting.Entry(ss);
-                    connecting.SaveChanges();
+                        connecting.person1.Attach(ss);
+                        connecting.Entry(ss);
+                        connecting.SaveChanges();
 
+                    }
                 }
+                else
+                    throw new Exception();
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
 
 
 
@@ -101,31 +123,42 @@ namespace MainAliReza.BackEnd
 
         public void Edit_Customer_ByAdmin(List<string> qq, string Old_UsernameCustomer, string Old_PasswordCustomer,string UserAdmin,string PassAdmin)
         {
-            if (dBController.Checklogin_Admin(UserAdmin, PassAdmin) && dBController.Checklogin_Customer(Old_UsernameCustomer, Old_PasswordCustomer))
+            try
             {
-                using (ConnectingDB connecting = new ConnectingDB())
+                if (dBController.Checklogin_Admin(UserAdmin, PassAdmin) && dBController.Checklogin_Customer(Old_UsernameCustomer, Old_PasswordCustomer))
                 {
-                    var ss = connecting.person1.Where(k => k.UserName == Old_UsernameCustomer && k.PassWord == Old_PasswordCustomer).FirstOrDefault();
-                    ss.FirstName = qq[0];
-                    ss.LastName = qq[1];
-                    ss.Birthday_Day = qq[2];
-                    ss.Birthday_Month = qq[3];
-                    ss.Birthday_Year = qq[4];
-                    ss.E_Mail = qq[5];
-                    ss.Mobil = qq[6];
-                    ss.Telephon = qq[7];
-                    ss.Gender = qq[9];
-                    ss.Picture = qq[12];
-                    ss.UserName = qq[10];
-                    ss.PassWord = qq[11];
-                    ss.Sath_E_Dastresy = qq[8];
+                    using (ConnectingDB connecting = new ConnectingDB())
+                    {
+                        var ss = connecting.person1.Where(k => k.UserName == Old_UsernameCustomer && k.PassWord == Old_PasswordCustomer).FirstOrDefault();
+                        ss.FirstName = qq[0];
+                        ss.LastName = qq[1];
+                        ss.Birthday_Day = qq[2];
+                        ss.Birthday_Month = qq[3];
+                        ss.Birthday_Year = qq[4];
+                        ss.E_Mail = qq[5];
+                        ss.Mobil = qq[6];
+                        ss.Telephon = qq[7];
+                        ss.Gender = qq[9];
+                        ss.Picture = qq[12];
+                        ss.UserName = qq[10];
+                        ss.PassWord = qq[11];
+                        ss.Sath_E_Dastresy = qq[8];
 
-                    connecting.person1.Attach(ss);
-                    connecting.Entry(ss);
-                    connecting.SaveChanges();
+                        connecting.person1.Attach(ss);
+                        connecting.Entry(ss);
+                        connecting.SaveChanges();
 
+                    }
                 }
+                else
+                    throw new Exception();
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            
 
 
 
