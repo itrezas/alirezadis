@@ -11,7 +11,7 @@ namespace MainAliReza.BackEnd
 
         public DBController dbController = new DBController();
 
-        public ConnectingDB dB = new ConnectingDB();
+        public ConnectingDB COnnectingdB = new ConnectingDB();
 
         public void Add_Product(List<string>jj,string UserAdmin,string PassAdmin)
         {
@@ -19,17 +19,60 @@ namespace MainAliReza.BackEnd
             {
                 Product product = new Product() { Name = jj[0], Category =jj[1], Price = jj[2], Weight = jj[3], Brand = jj[4], Mojody_Anbar = jj[5], General_Explanation = jj[6], Picture = jj[7] };
 
-                using (dB)
+                using (COnnectingdB)
                 {
-                    dB.product1.Add(product);
-                    dB.SaveChanges();
+                    COnnectingdB.product1.Add(product);
+                    COnnectingdB.SaveChanges();
                 }
             }
         }
 
-        public void Edit_Product(List<string> ii, string UserAdmin, string PassAdmin,string Id)
+        public void Edit_Product(List<string> ii, string UserAdmin, string PassAdmin,int Id)
         {
+            if (dbController.Checklogin_Admin(UserAdmin,PassAdmin))
+            {
+                using (COnnectingdB)
+                {
+                    var pr = COnnectingdB.product1.Where(itEm => itEm.ID == Id).FirstOrDefault();
 
+                    pr.Name = ii[0];
+                    pr.Category = ii[1];
+                    pr.Price = ii[2];
+                    pr.Weight = ii[3];
+                    pr.Brand = ii[4];
+                    pr.Mojody_Anbar = ii[5];
+                    pr.General_Explanation = ii[6];
+                    pr.Picture = ii[7];
+
+                    COnnectingdB.product1.Attach(pr);
+                    COnnectingdB.Entry(pr);
+                    COnnectingdB.SaveChanges();
+
+                }
+            }
+        }
+
+        public void Delete_Product(string UserAdmin, string PassAdmin, int Id)
+        {
+            if (dbController.Checklogin_Admin(UserAdmin,PassAdmin))
+            {
+                using (COnnectingdB)
+                {
+                    var pt = COnnectingdB.product1.Where(iTem => iTem.ID == Id).FirstOrDefault();
+
+                    COnnectingdB.product1.Remove(pt);
+
+                    foreach (var item in COnnectingdB.product1)
+                    {
+                        if (item.ID>Id)
+                        {
+                            item.ID -= 1;
+                        }
+                    }
+
+                    COnnectingdB.SaveChanges();
+                }
+            }
         }
 
     }

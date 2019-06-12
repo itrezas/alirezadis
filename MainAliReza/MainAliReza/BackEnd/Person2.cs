@@ -51,6 +51,7 @@ namespace MainAliReza.BackEnd
             }
         }
 
+        //customer edit info of himself(herself):
         public void Edit_Person_ByCustomer(List<string> qq, string Old_Username, string Old_Password)
         {
             try
@@ -94,6 +95,7 @@ namespace MainAliReza.BackEnd
 
         }
 
+        //admin edit info of himself(herself):
         public void Edit_Person_ByAdmin(List<string> qq, string Old_Username, string Old_Password)
         {
             try
@@ -136,7 +138,8 @@ namespace MainAliReza.BackEnd
 
 
         }
-
+        
+        //admin edit info of customer:
         public void Edit_Customer_ByAdmin(List<string> qq, string Old_UsernameCustomer, string Old_PasswordCustomer,string UserAdmin,string PassAdmin)
         {
             try
@@ -189,7 +192,18 @@ namespace MainAliReza.BackEnd
                 {
                     var tt = db02.person1.Where(a => a.UserName == us && a.PassWord == ps).FirstOrDefault();
 
+                    int id = tt.ID;
+                    //remove person:
                     db02.person1.Remove(tt);
+                    //ordering ID number in database after deleting a person:
+                    foreach (var item in db02.person1)
+                    {
+                        if (item.ID>id)
+                        {
+                            item.ID -= 1;
+                        }
+                    }
+
                     db02.SaveChanges();
 
                 }
