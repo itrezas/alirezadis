@@ -174,6 +174,7 @@
     <Compile Include="BackEnd\Person2.cs" />
     <Compile Include="BackEnd\Product.cs" />
     <Compile Include="BackEnd\Product2.cs" />
+    <Compile Include="BackEnd\Returning_Info.cs" />
     <Compile Include="FrontEnd\Customer_Dashboard.xaml.cs">
       <DependentUpon>Customer_Dashboard.xaml</DependentUpon>
     </Compile>
