@@ -89,7 +89,100 @@ namespace MainAliReza.BackEnd
             }
         }
 
-        //
+        //return info of special pruduct for who want it:
+        public Product Return_Info(string name)
+        {
+            Product product = new Product();
+            Product pro = new Product();
+
+            try
+            {
+                using (connectingDB)
+                {
+                    pro = connectingDB.product1.Where(t => t.Name == name).FirstOrDefault();
+                }
+
+                if (Convert.ToInt32(pro.Mojody_Anbar) != 0)
+                {
+                    product = pro;
+                    product.Mojody_Anbar = "Yes";
+                    return product;
+                }
+                else
+                    throw new Exception();
+                
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        //return info of special category for who want them:
+        public List<Product> Return_Infoes(string category)
+        {
+            List<Product> products = new List<Product>();
+            List<Product> prod = new List<Product>();
+
+            try
+            {
+                using (connectingDB)
+                {
+                    foreach (var item in connectingDB.product1)
+                    {
+                        if (item.Category == category && Convert.ToInt32(item.Mojody_Anbar) != 0)
+                        {
+                            products.Add(item);
+                        }
+                    }
+                }
+
+                if (products != null)
+                {
+                    foreach (var i in products)
+                    {
+                        prod.Add(i);
+                    }
+
+                    foreach (var j in prod)
+                    {
+                        j.Mojody_Anbar = "Yes";
+                    }
+
+                    return prod;
+
+                }
+                else
+                    throw new Exception();
+
+                
+            }
+            catch (ArgumentNullException)
+            {
+
+                throw;
+            }
+            catch(Exception)
+            {
+
+                throw;
+            }
+        }
+
+        //return general explanation of special pruduct for who want it:
+        public ProductGE Return_GeneralExplanation(string name)
+        {
+            ProductGE productGE = new ProductGE();
+
+            using (connectingDB)
+            {
+                productGE = connectingDB.productGEs.Where(u => u.Name == name).FirstOrDefault();
+            }
+
+                return productGE;
+        }
 
     }
 }

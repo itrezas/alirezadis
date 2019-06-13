@@ -15,7 +15,6 @@ namespace MainAliReza.BackEnd
         public string Weight { get; set; }
         public string Brand { get; set; }
         public string Mojody_Anbar { get; set; }
-        public string General_Explanation { get; set; }
         public string Picture { get; set; }
     }
 }

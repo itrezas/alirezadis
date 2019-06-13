@@ -17,7 +17,7 @@ namespace MainAliReza.BackEnd
         {
             if(dbController.Checklogin_Admin(UserAdmin,PassAdmin))
             {
-                Product product = new Product() { Name = jj[0], Category =jj[1], Price = jj[2], Weight = jj[3], Brand = jj[4], Mojody_Anbar = jj[5], General_Explanation = jj[6], Picture = jj[7] };
+                Product product = new Product() { Name = jj[0], Category =jj[1], Price = jj[2], Weight = jj[3], Brand = jj[4], Mojody_Anbar = jj[5], Picture = jj[6] };
 
                 using (COnnectingdB)
                 {
@@ -41,8 +41,7 @@ namespace MainAliReza.BackEnd
                     pr.Weight = ii[3];
                     pr.Brand = ii[4];
                     pr.Mojody_Anbar = ii[5];
-                    pr.General_Explanation = ii[6];
-                    pr.Picture = ii[7];
+                    pr.Picture = ii[6];
 
                     COnnectingdB.product1.Attach(pr);
                     COnnectingdB.Entry(pr);
