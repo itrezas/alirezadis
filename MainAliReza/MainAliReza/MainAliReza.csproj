@@ -170,12 +170,14 @@
     </Compile>
     <Compile Include="BackEnd\ConnectingDB.cs" />
     <Compile Include="BackEnd\DBController.cs" />
+    <Compile Include="BackEnd\IN.cs" />
     <Compile Include="BackEnd\Person.cs" />
     <Compile Include="BackEnd\Person2.cs" />
     <Compile Include="BackEnd\Product.cs" />
     <Compile Include="BackEnd\Product2.cs" />
     <Compile Include="BackEnd\ProductGE.cs" />
     <Compile Include="BackEnd\Returning_Info.cs" />
+    <Compile Include="BackEnd\Shoppingcart.cs" />
     <Compile Include="FrontEnd\Customer_Dashboard.xaml.cs">
       <DependentUpon>Customer_Dashboard.xaml</DependentUpon>
     </Compile>
