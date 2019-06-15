@@ -12,6 +12,7 @@ namespace MainAliReza.BackEnd
         public DbSet<Person> person1 { get; set; }
         public DbSet<Product> product1 { get; set; }
         public DbSet<ProductGE> productGEs { get; set; }
+        public DbSet<SaveShoppingCartToDB> saveShoppingCartToDBs { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

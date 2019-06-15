@@ -177,6 +177,8 @@
     <Compile Include="BackEnd\Product2.cs" />
     <Compile Include="BackEnd\ProductGE.cs" />
     <Compile Include="BackEnd\Returning_Info.cs" />
+    <Compile Include="BackEnd\SaveShoppingCartToDB.cs" />
+    <Compile Include="BackEnd\SaveShoppingCartToDB2.cs" />
     <Compile Include="BackEnd\Shoppingcart.cs" />
     <Compile Include="FrontEnd\Customer_Dashboard.xaml.cs">
       <DependentUpon>Customer_Dashboard.xaml</DependentUpon>
