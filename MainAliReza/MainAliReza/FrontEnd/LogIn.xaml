@@ -8,7 +8,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Image Margin="0,0,-0.068,0" Source="Untitled1.png" Stretch="Fill" Grid.ColumnSpan="4" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2">
+        <Image Margin="-3,2,3,-1.4" Source="Untitled1.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
