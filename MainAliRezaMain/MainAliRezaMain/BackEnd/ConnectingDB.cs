@@ -16,7 +16,7 @@ namespace MainAliRezaMain.BackEnd
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb ; Integrated Security = true; AttachDbFileName=E:\project972dis\alirezadis\MainAliRezaMain\MainAliRezaMain\mainStoreSite.mainalirezamain.mdf;Database=mainStoreSite.mainalirezamain;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=mainStoreSite.mainalirezamain;Trusted_Connection=True;");
         }
     }
 }

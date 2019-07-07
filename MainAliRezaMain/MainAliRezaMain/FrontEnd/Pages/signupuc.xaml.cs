@@ -13,16 +13,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MainAliRezaMain.FrontEnd
+namespace MainAliRezaMain.FrontEnd.Pages
 {
     /// <summary>
-    /// Interaction logic for LogIn.xaml
+    /// Interaction logic for signupuc.xaml
     /// </summary>
-    public partial class LogIn : UserControl
+    public partial class signupuc : UserControl
     {
-        public LogIn()
+        public signupuc()
         {
             InitializeComponent();
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

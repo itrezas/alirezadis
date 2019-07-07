@@ -16,5 +16,6 @@ namespace MainAliRezaMain.BackEnd
         public string Brand { get; set; }
         public string Mojody_Anbar { get; set; }
         public string Picture { get; set; }
+
     }
 }

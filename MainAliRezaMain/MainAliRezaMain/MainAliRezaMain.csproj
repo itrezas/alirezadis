@@ -38,6 +38,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MaterialDesignColors, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.1.2\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.5.1.1345, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.2.5.1\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.EntityFrameworkCore, Version=2.2.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.EntityFrameworkCore.2.2.4\lib\netstandard2.0\Microsoft.EntityFrameworkCore.dll</HintPath>
     </Reference>
@@ -138,7 +144,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="FrontEnd\LogIn.xaml">
+    <Page Include="FrontEnd\Pages\LoginUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrontEnd\Pages\signupuc.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -162,8 +172,11 @@
     <Compile Include="BackEnd\SaveShoppingCartToDB.cs" />
     <Compile Include="BackEnd\SaveShoppingCartToDB2.cs" />
     <Compile Include="BackEnd\Shoppingcart.cs" />
-    <Compile Include="FrontEnd\LogIn.xaml.cs">
-      <DependentUpon>LogIn.xaml</DependentUpon>
+    <Compile Include="FrontEnd\Pages\LoginUC.xaml.cs">
+      <DependentUpon>LoginUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Pages\signupuc.xaml.cs">
+      <DependentUpon>signupuc.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -174,6 +187,18 @@
     <Compile Include="Migrations\13980325161247_ar1.cs" />
     <Compile Include="Migrations\13980325161247_ar1.designer.cs">
       <DependentUpon>13980325161247_ar1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20190706152455_sad.cs" />
+    <Compile Include="Migrations\20190706152455_sad.designer.cs">
+      <DependentUpon>20190706152455_sad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20190706152954_reza.cs" />
+    <Compile Include="Migrations\20190706152954_reza.designer.cs">
+      <DependentUpon>20190706152954_reza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20190706170739_f1555.cs" />
+    <Compile Include="Migrations\20190706170739_f1555.designer.cs">
+      <DependentUpon>20190706170739_f1555.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\ConnectingDBModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">

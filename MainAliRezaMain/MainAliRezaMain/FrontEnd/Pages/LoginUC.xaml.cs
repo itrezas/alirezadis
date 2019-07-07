@@ -14,17 +14,21 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MainAliRezaMain.FrontEnd.Pages;
 
-namespace MainAliRezaMain
+namespace MainAliRezaMain.FrontEnd.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for LoginUC.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LoginUC : UserControl
     {
-        public MainWindow()
+        public LoginUC()
         {
             InitializeComponent();
-            body.Children.Add(new LoginUC());
+        }
+        public signupuc signupobj = new signupuc();
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }
