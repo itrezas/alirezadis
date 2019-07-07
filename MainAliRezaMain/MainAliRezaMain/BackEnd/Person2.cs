@@ -29,11 +29,11 @@ namespace MainAliRezaMain.BackEnd
             using (var db01 = new ConnectingDB())
             {
                 //first person add (as admin):
-                Person p = db01.person1.First();
+                var p = db01.person1.FirstOrDefault();
                 if (p == null)
                 {
                     Person per = new Person
-                    { FirstName = pp[0], LastName = pp[1], Birthday_Day = pp[2], Birthday_Month = pp[3], Birthday_Year = pp[4], E_Mail = pp[5], Gender = pp[9], Mobil = pp[6], PassWord = pp[11], UserName = pp[10], Picture = pp[12], Telephon = pp[7], Sath_E_Dastresy = "0" };
+                    { FirstName = pp[0], LastName = pp[1], Birthday_Day = pp[2], Birthday_Month = pp[3], Birthday_Year = pp[4], E_Mail = pp[5], Gender = pp[8], Mobil = pp[6], PassWord = pp[10], UserName = pp[9], Picture = pp[11], Telephon = pp[7], Sath_E_Dastresy = "0" };
 
                     db01.person1.Add(per);
                     db01.SaveChanges();
@@ -42,7 +42,7 @@ namespace MainAliRezaMain.BackEnd
                 else if (p != null)
                 {
                     Person per = new Person
-                    { FirstName = pp[0], LastName = pp[1], Birthday_Day = pp[2], Birthday_Month = pp[3], Birthday_Year = pp[4], E_Mail = pp[5], Gender = pp[9], Mobil = pp[6], PassWord = pp[11], UserName = pp[10], Picture = pp[12], Telephon = pp[7], Sath_E_Dastresy = "1" };
+                    { FirstName = pp[0], LastName = pp[1], Birthday_Day = pp[2], Birthday_Month = pp[3], Birthday_Year = pp[4], E_Mail = pp[5], Gender = pp[8], Mobil = pp[6], PassWord = pp[10], UserName = pp[9], Picture = pp[11], Telephon = pp[7], Sath_E_Dastresy = "1" };
 
                     db01.person1.Add(per);
                     db01.SaveChanges();
@@ -69,10 +69,10 @@ namespace MainAliRezaMain.BackEnd
                         ss.E_Mail = qq[5];
                         ss.Mobil = qq[6];
                         ss.Telephon = qq[7];
-                        ss.Gender = qq[9];
-                        ss.Picture = qq[12];
-                        ss.UserName = qq[10];
-                        ss.PassWord = qq[11];
+                        ss.Gender = qq[8];
+                        ss.Picture = qq[11];
+                        ss.UserName = qq[9];
+                        ss.PassWord = qq[10];
                         ss.Sath_E_Dastresy = "1";
 
                         connecting.person1.Attach(ss);

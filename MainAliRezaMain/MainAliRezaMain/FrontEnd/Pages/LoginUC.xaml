@@ -16,7 +16,7 @@
                 <GradientStop Color="#FF494BD2" Offset="0.987"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <TextBox Width="200" Height="50" Margin="399,93,401,457" materialDesign:HintAssist.Hint="Username" FontSize="18" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Background="Gainsboro"  >
+        <TextBox x:Name="Usernametxtbx" Width="200" Height="50" Margin="399,93,401,457" materialDesign:HintAssist.Hint="Username" FontSize="18" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Background="Gainsboro"  >
             <TextBox.SelectionBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
@@ -25,8 +25,8 @@
             </TextBox.SelectionBrush>
         </TextBox>
         <Button Content="I dont have an account" Margin="395,310,398,258" Background="{x:Null}" Foreground="#DD4A29EE" FontSize="16" FontWeight="Bold" BorderBrush="{x:Null}" Click="Button_Click" />
-        <PasswordBox Width="200" Height="50" Margin="399,148,401,402" materialDesign:HintAssist.Hint="Password" FontSize="18"/>
-        <Button Width="200" Height="50" Content="Sign in" Margin="399,239,401,311" FontSize="20"/>
-        <Label Content="Log In" Margin="438,25,436,507" Foreground="#DD5046ED" FontSize="36" FontWeight="Bold" FontFamily="Ebrima"/>
+        <PasswordBox x:Name="passwordbox" Width="200" Height="50" Margin="399,148,401,402" materialDesign:HintAssist.Hint="Password" FontSize="18"/>
+        <Button Width="200" Height="50" Content="Sign in" Margin="399,239,401,311" FontSize="20" Click="Button_Click_1"/>
+        <Label Content="Log In" Margin="438,25,436,507" Foreground="#DD4F32AD" FontSize="36" FontWeight="Bold" FontFamily="Ebrima" Background="Gainsboro"/>
     </Grid>
 </UserControl>

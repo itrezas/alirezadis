@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="MainAliRezaMain.FrontEnd.Pages.admin"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MainAliRezaMain.FrontEnd.Pages"
+            mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1000" >
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF2848D1" Offset="1"/>
+                <GradientStop Color="#FFDDDDDD" Offset="0.67"/>
+                <GradientStop Color="#FF3451D1" Offset="0.978"/>
+                <GradientStop Color="#FF494BD2" Offset="0.987"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button Height="50" Content="edit my profile" Margin="187,50,525,500" FontSize="20" Click="Button_Click_1"/>
+        <Button Height="50" Content="add product" Margin="597,50,115,500" FontSize="20" Click="Button_Click_1"/>
+        <Button Height="50" Content="delet person" Margin="391,294,321,256" FontSize="20" Click="Button_Click_1"/>
+        <Button Height="50" Content="edit person" Margin="187,133,525,417" FontSize="20" Click="Button_Click_1"/>
+        <Button Height="50" Content="add person" Margin="187,213,525,337" FontSize="20" Click="Button_Click_1"/>
+        <Button Height="50" Content="delet product" Margin="597,213,115,337" FontSize="20" Click="Button_Click_1"/>
+        <Button Height="50" Content="edit product" Margin="597,133,115,417" FontSize="20" Click="Button_Click_1"/>
+
+    </Grid>
+</UserControl>

@@ -144,7 +144,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="FrontEnd\Pages\admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="FrontEnd\Pages\LoginUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrontEnd\Pages\product.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrontEnd\Pages\productUC.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -172,8 +184,17 @@
     <Compile Include="BackEnd\SaveShoppingCartToDB.cs" />
     <Compile Include="BackEnd\SaveShoppingCartToDB2.cs" />
     <Compile Include="BackEnd\Shoppingcart.cs" />
+    <Compile Include="FrontEnd\Pages\admin.xaml.cs">
+      <DependentUpon>admin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FrontEnd\Pages\LoginUC.xaml.cs">
       <DependentUpon>LoginUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Pages\product.xaml.cs">
+      <DependentUpon>product.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Pages\productUC.xaml.cs">
+      <DependentUpon>productUC.xaml</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\Pages\signupuc.xaml.cs">
       <DependentUpon>signupuc.xaml</DependentUpon>

@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using MainAliRezaMain.BackEnd;
 namespace MainAliRezaMain.FrontEnd.Pages
 {
     /// <summary>
@@ -20,6 +20,8 @@ namespace MainAliRezaMain.FrontEnd.Pages
     /// </summary>
     public partial class signupuc : UserControl
     {
+        DBController dBController = new DBController();
+        Person2 person2 = new Person2();
         public signupuc()
         {
             InitializeComponent();
@@ -27,6 +29,26 @@ namespace MainAliRezaMain.FrontEnd.Pages
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
+           
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            List<string> vs = new List<string>();
+            vs.Add(firstnametxtb.Text);
+            vs.Add(lastnametxtb.Text);
+            vs.Add("0");
+            vs.Add("0");
+            vs.Add("0");
+            vs.Add(emailtxtb.Text);
+            vs.Add(phonetxtb.Text);
+            vs.Add("0");
+            vs.Add("0");
+            vs.Add(usernametxtb.Text);
+            vs.Add(passwordtxtb.Password);
+            vs.Add("0");
+            person2.Add_Person_FirstAdmin_And_Customers(vs);
+
 
         }
     }

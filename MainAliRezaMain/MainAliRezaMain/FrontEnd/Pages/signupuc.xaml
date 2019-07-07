@@ -16,13 +16,13 @@
                 <GradientStop Color="#FF494BD2" Offset="0.987"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <TextBox Width="200" Height="50" Margin="629,91,171,459" materialDesign:HintAssist.Hint="last name" FontSize="18" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Background="Gainsboro"  />
-        <TextBox Width="200" Height="50" Margin="271,91,529,459" materialDesign:HintAssist.Hint="fisrt name" FontSize="18" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Background="Gainsboro"  />
-        <TextBox Width="200" Height="50" Margin="271,178,529,372" materialDesign:HintAssist.Hint="email" FontSize="18" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Background="Gainsboro"  />
-        <TextBox Width="200" Height="50" Margin="629,178,171,372" materialDesign:HintAssist.Hint="phone" FontSize="18" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Background="Gainsboro"  />
-        <TextBox Width="200" Height="50" Margin="271,260,529,290" materialDesign:HintAssist.Hint="Username" FontSize="18" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Background="Gainsboro" TextChanged="TextBox_TextChanged"  />
-        <PasswordBox Width="200" Height="50" Margin="629,260,171,290" materialDesign:HintAssist.Hint="Password" FontSize="18"/>
-        <Button Width="200" Height="50" Content="Sign up" Margin="417,360,383,190" FontSize="20"/>
+        <TextBox x:Name="lastnametxtb" Width="200" Height="50" Margin="629,91,171,459" materialDesign:HintAssist.Hint="last name" FontSize="18" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Background="Gainsboro"  />
+        <TextBox x:Name="firstnametxtb" Width="200" Height="50" Margin="271,91,529,459" materialDesign:HintAssist.Hint="fisrt name" FontSize="18" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Background="Gainsboro"  />
+        <TextBox x:Name="emailtxtb" Width="200" Height="50" Margin="271,178,529,372" materialDesign:HintAssist.Hint="email" FontSize="18" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Background="Gainsboro"  />
+        <TextBox x:Name="phonetxtb" Width="200" Height="50" Margin="629,178,171,372" materialDesign:HintAssist.Hint="phone" FontSize="18" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Background="Gainsboro"  />
+        <TextBox x:Name="usernametxtb" Width="200" Height="50" Margin="271,260,529,290" materialDesign:HintAssist.Hint="Username" FontSize="18" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Background="Gainsboro" TextChanged="TextBox_TextChanged"  />
+        <PasswordBox x:Name="passwordtxtb" Width="200" Height="50" Margin="629,260,171,290" materialDesign:HintAssist.Hint="Password" FontSize="18"/>
+        <Button Width="200" Height="50" Content="Sign up" Margin="417,360,383,190" FontSize="20" Click="Button_Click"/>
         <Label Content="sign up" Margin="464,25,383,507" Foreground="#DD5046ED" FontSize="36" FontWeight="Bold" FontFamily="Ebrima"/>
     </Grid>
 </UserControl>

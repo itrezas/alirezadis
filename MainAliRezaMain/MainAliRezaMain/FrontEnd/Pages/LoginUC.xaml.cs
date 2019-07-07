@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MainAliRezaMain.FrontEnd.Pages;
+using MainAliRezaMain.BackEnd;
 
 namespace MainAliRezaMain.FrontEnd.Pages
 {
@@ -21,6 +22,7 @@ namespace MainAliRezaMain.FrontEnd.Pages
     /// </summary>
     public partial class LoginUC : UserControl
     {
+        DBController dBController = new DBController();
         public LoginUC()
         {
             InitializeComponent();
@@ -28,7 +30,17 @@ namespace MainAliRezaMain.FrontEnd.Pages
         public signupuc signupobj = new signupuc();
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
+            MainWindow win = (MainWindow)Window.GetWindow(this);
+            win.body.Children.Add(signupobj);
+        }
+        public productUC product = new productUC();
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if(dBController.Checklogin_Customer(Usernametxtbx.Text,passwordbox.Password))
+            {
+                MainWindow win = (MainWindow)Window.GetWindow(this);
+                win.body.Children.Add(product);
+            }
         }
     }
 }
