@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MainAliRezaMain.FrontEnd.Pages"
+                xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="1000" >
     <Grid>
@@ -15,5 +16,11 @@
                 <GradientStop Color="#FF494BD2" Offset="0.987"/>
             </LinearGradientBrush>
         </Grid.Background>
+        <Button Height="50" Content="my profile" Margin="18,14,846,536" FontSize="20" Click="Button_Click_1"/>
+        <Button Height="Auto" Content="mobile" Margin="737,198,76,304" FontSize="24" Click="Button_Click_1"/>
+        <Button Height="Auto" Content="pc" Margin="416,198,402,304" FontSize="36" Click="Button_Click_1"/>
+        <Button Height="Auto" Content="lap top" Margin="91,198,717,304" FontSize="24" Click="Button_Click_1"/>
+        <Label Content="product" Margin="424,17,370,515" Foreground="#DD4F32AD" FontSize="36" FontWeight="Bold" FontFamily="Ebrima" Background="Gainsboro"/>
+
     </Grid>
 </UserControl>

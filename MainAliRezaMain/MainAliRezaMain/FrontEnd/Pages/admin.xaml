@@ -22,6 +22,6 @@
         <Button Height="50" Content="add person" Margin="187,213,525,337" FontSize="20" Click="Button_Click_1"/>
         <Button Height="50" Content="delet product" Margin="597,213,115,337" FontSize="20" Click="Button_Click_1"/>
         <Button Height="50" Content="edit product" Margin="597,133,115,417" FontSize="20" Click="Button_Click_1"/>
-
+        <Button Height="50" Content="back" Margin="39,523,879,27" FontSize="20" Click="Button_Click_1"/>
     </Grid>
 </UserControl>
