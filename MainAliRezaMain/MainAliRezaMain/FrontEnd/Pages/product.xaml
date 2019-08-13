@@ -7,7 +7,7 @@
                 xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="1000" >
-    <Grid>
+    <Grid  Width="1000" Height="600">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="#FF2848D1" Offset="1"/>
@@ -16,11 +16,100 @@
                 <GradientStop Color="#FF494BD2" Offset="0.987"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Button Height="50" Content="my profile" Margin="18,14,846,536" FontSize="20" Click="Button_Click_1"/>
-        <Button Height="Auto" Content="mobile" Margin="737,198,76,304" FontSize="24" Click="Button_Click_1"/>
-        <Button Height="Auto" Content="pc" Margin="416,198,402,304" FontSize="36" Click="Button_Click_1"/>
-        <Button Height="Auto" Content="lap top" Margin="91,198,717,304" FontSize="24" Click="Button_Click_1"/>
-        <Label Content="product" Margin="424,17,370,515" Foreground="#DD4F32AD" FontSize="36" FontWeight="Bold" FontFamily="Ebrima" Background="Gainsboro"/>
+
+        <Button x:Name="profilebtn" Width="80" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,0,0,0" Content="profile" Click="profilebtn_Click" />
+        <Button x:Name="signoutbtn" Width="80"  VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5,0,0,0" Content="signout" Click="signoutbtn_Click" />
+
+        <Border BorderThickness="1" BorderBrush="Black">
+            <Grid  Margin="0,60">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0" Grid.Row="0" Margin="0" >
+                    <Button x:Name="asuszenbook" Content="ASUSS zenbook" HorizontalAlignment="Center" Margin="86,88,85.8,39.2" FontSize="18" Background="{x:Null}" BorderBrush="{x:Null}" Click="asuszenbook_Click" />
+                    <Label Content="12,900,000" Height="30" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="115,0,114.8,14.2" FontSize="18" Foreground="#DDFF0000" FontWeight="Bold"/>
+                    <Image Grid.Column="0" Grid.Row="0" Source="/photo/ASUSS13.jpg"   Width="102" Height="92" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="116,-2,114.8,0" RenderTransformOrigin="0.572,-0.032"/>
+                </Grid>
+
+
+                <Grid Grid.Column="1" Grid.Row="0" Margin="0" >
+                    <Image Source="/photo/ASUSS18.jpg"   Width="95" Height="92" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="115,4,122.8,0"/>
+                    <Button x:Name="asuszenbookux" Click="asuszenbookux_Click" Content="ASUSS zenbook ux " HorizontalAlignment="Center" Margin="71,94,70.8,33.2" FontSize="18" Background="{x:Null}" BorderBrush="{x:Null}"/>
+                    <Label Content="18,250,000" Height="30" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="115,0,114.8,4.2" FontSize="18" Foreground="#DDFF0000" FontWeight="Bold"/>
+                </Grid>
+
+                <Grid Grid.Column="2" Grid.Row="0" Margin="0" >
+                    <Image Source="/photo/ASUSS19.jpg"  Width="93" Height="92" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="116,8,123.8,0"/>
+                    <Button x:Name="ASUSSN580" Click="ASUSSN580_Click" Content="ASUSS N580" HorizontalAlignment="Center" Margin="99,96,98.8,31.2" FontSize="18" Background="{x:Null}" BorderBrush="{x:Null}"/>
+                    <Label Content="19,000,000" Height="30" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="115,0,114.8,2.2" FontSize="18" Foreground="#DDFF0000" FontWeight="Bold"/>
+                </Grid>
+
+
+
+
+
+                <Grid Grid.Column="0" Grid.Row="1" Margin="0" >
+                    <Image Source="/photo/ASUSS7.jpg"  Width="80" Height="80" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="116,12,136.8,0"/>
+                    <Button x:Name="asusviewbook" Content="asus viewbook" HorizontalAlignment="Center" Margin="91,94,90.8,34" FontSize="18" Background="{x:Null}" BorderBrush="{x:Null}" Click="asusviewbook_Click" />
+                    <Label Content="7,100,000" Height="30" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="120,0,119.8,0" FontSize="18" Foreground="#DDFF0000" FontWeight="Bold"/>
+                </Grid>
+
+
+
+
+                <Grid Grid.Column="1" Grid.Row="1" Margin="0" >
+                    <Image Source="/photo/MICROSOFT14.jpg"  Width="80" Height="80" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,20"/>
+                    <Button Content="surface laptop-E " HorizontalAlignment="Center" Margin="81,96,80.8,32" FontSize="18" Background="{x:Null}" BorderBrush="{x:Null}" />
+                    <Label Content="14,050,000" Height="30" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="115,0,114.8,6" FontSize="18" Foreground="#DDFF0000" FontWeight="Bold"/>
+                </Grid>
+
+
+
+
+                <Grid Grid.Column="2" Grid.Row="1" Margin="0" >
+
+                    <Image Source="/photo/xiaomi20.jpg"  Width="80" Height="80" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="116,10,136.8,0"/>
+                    <Button Content="xiaomi G5771" HorizontalAlignment="Center" Margin="96,98,95.8,30" FontSize="18" Background="{x:Null}" BorderBrush="{x:Null}" />
+                    <Label Content="21,000,000" Height="30" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="115,0,114.8,-2" FontSize="18" Foreground="#DDFF0000" FontWeight="Bold" />
+                </Grid>
+
+                <Grid Grid.Column="0" Grid.Row="2" Margin="0" >
+
+                    <Image Source="/photo/Acer9.jpg"  Width="80" Height="80" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="120,8,132.8,0"/>
+                    <Button Content="aspire E5" HorizontalAlignment="Center" Margin="114,104,113.8,23.2" FontSize="18" Background="{x:Null}" BorderBrush="{x:Null}" />
+                    <Label Content="9,500,000" Height="30" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="120,0,119.8,-1.8" FontSize="18" Foreground="#DDFF0000" FontWeight="Bold" />
+                </Grid>
+
+
+
+
+                <Grid Grid.Column="1" Grid.Row="2" Margin="0" >
+
+                    <Image Source="/photo/Apple13.jpg"  Width="80" Height="80" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="124,10,136.8,0"/>
+                    <Button Content="macbook MQD32 2017 " HorizontalAlignment="Center" Margin="55,95,54.8,32.2" FontSize="18" Background="{x:Null}" BorderBrush="{x:Null}" />
+                    <Label Content="13,000,000" Height="30" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="120,0,110.8,2.2" FontSize="18" Foreground="#DDFF0000" FontWeight="Bold" />
+                </Grid>
+
+
+
+
+                <Grid Grid.Column="2" Grid.Row="1" Margin="0.4,149.8,0.4,10.4" Grid.RowSpan="2" >
+
+                    <Image Source="/photo/ASUS50.jpg"  Width="80" Height="80" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="120,28,141.6,0"/>
+                    <Button Content="asus 15 inch" HorizontalAlignment="Center" Margin="102,110,102,17" FontSize="18" Background="{x:Null}" BorderBrush="{x:Null}" />
+                    <Label Content="50,500,000" Height="30" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="115,0" FontSize="18" Foreground="#DDFF0000" FontWeight="Bold" />
+                </Grid>
+
+            </Grid>
+        </Border>
 
     </Grid>
 </UserControl>

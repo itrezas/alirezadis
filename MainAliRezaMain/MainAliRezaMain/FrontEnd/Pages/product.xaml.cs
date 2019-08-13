@@ -24,5 +24,50 @@ namespace MainAliRezaMain.FrontEnd.Pages
         {
             InitializeComponent();
         }
+
+        private void signoutbtn_Click(object sender, RoutedEventArgs e)
+        {
+            LoginUC login2 = new LoginUC();
+            MainWindow win = (MainWindow)Window.GetWindow(this);
+            win.body.Children.Remove(this);
+            win.body.Children.Add(login2);
+        }
+
+        private void profilebtn_Click(object sender, RoutedEventArgs e)
+        {
+           user   profile1 = new user();
+            MainWindow win = (MainWindow)Window.GetWindow(this);
+            win.body.Children.Remove(this);
+            win.body.Children.Add(profile1);
+        }
+
+        private void asuszenbook_Click(object sender, RoutedEventArgs e)
+        {
+            asuszenbook product1 = new asuszenbook();
+            MainWindow win = (MainWindow)Window.GetWindow(this);
+            win.body.Children.Remove(this);
+            win.body.Children.Add(product1);
+        }
+
+        private void asuszenbookux_Click(object sender, RoutedEventArgs e)
+        {
+            ASUSSZENBOOKUX product2 = new ASUSSZENBOOKUX();
+            MainWindow win = (MainWindow)Window.GetWindow(this);
+            win.body.Children.Remove(this);
+            win.body.Children.Add(product2);
+        }
+
+        private void ASUSSN580_Click(object sender, RoutedEventArgs e)
+        {
+            ASUSSN580 product3= new ASUSSN580();
+            MainWindow win = (MainWindow)Window.GetWindow(this);
+            win.body.Children.Remove(this);
+            win.body.Children.Add(product3);
+        }
+
+        private void asusviewbook_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -31,7 +31,8 @@ namespace MainAliRezaMain.FrontEnd.Pages
         {
            
         }
-
+        public product pr1 = new product();
+       
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             List<string> vs = new List<string>();
@@ -48,6 +49,10 @@ namespace MainAliRezaMain.FrontEnd.Pages
             vs.Add(passwordtxtb.Password);
             vs.Add("0");
             person2.Add_Person_FirstAdmin_And_Customers(vs);
+            
+        MainWindow win3 = (MainWindow)Window.GetWindow(this);
+            win3.body.Children.Remove(this);
+            win3.body.Children.Add(pr1);
 
 
         }

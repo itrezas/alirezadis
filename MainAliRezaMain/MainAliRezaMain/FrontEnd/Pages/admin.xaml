@@ -15,13 +15,13 @@
                 <GradientStop Color="#FF494BD2" Offset="0.987"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Button Height="50" Content="edit my profile" Margin="187,50,525,500" FontSize="20" Click="Button_Click_1"/>
-        <Button Height="50" Content="add product" Margin="597,50,115,500" FontSize="20" Click="Button_Click_1"/>
-        <Button Height="50" Content="delet person" Margin="391,294,321,256" FontSize="20" Click="Button_Click_1"/>
-        <Button Height="50" Content="edit person" Margin="187,133,525,417" FontSize="20" Click="Button_Click_1"/>
-        <Button Height="50" Content="add person" Margin="187,213,525,337" FontSize="20" Click="Button_Click_1"/>
-        <Button Height="50" Content="delet product" Margin="597,213,115,337" FontSize="20" Click="Button_Click_1"/>
-        <Button Height="50" Content="edit product" Margin="597,133,115,417" FontSize="20" Click="Button_Click_1"/>
-        <Button Height="50" Content="back" Margin="39,523,879,27" FontSize="20" Click="Button_Click_1"/>
+        <Button Height="50" Content="edit my profile" Margin="187,50,525,500" FontSize="20" Click="Button_Click_7"/>
+        <Button Height="50" Content="add product" Margin="597,50,115,500" FontSize="20" Click="Button_Click_6" />
+        <Button Height="50" Content="delet person" Margin="391,294,321,256" FontSize="20" Click="Button_Click_5"/>
+        <Button Height="50" Content="edit person" Margin="187,133,525,417" FontSize="20" Click="Button_Click_4"/>
+        <Button Height="50" Content="add person" Margin="187,213,525,337" FontSize="20" Click="Button_Click_3"/>
+        <Button Height="50" Content="delet product" Margin="597,213,115,337" FontSize="20" Click="Button_Click_2" />
+        <Button Height="50" Content="edit product" Margin="597,133,115,417" FontSize="20"  Click="Button_Click_1"/>
+        <Button Height="50" Content="back" Margin="39,523,879,27" FontSize="20" Click="Button_Click"/>
     </Grid>
 </UserControl>

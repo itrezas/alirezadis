@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="MainAliRezaMain.FrontEnd.Pages.asuszenbook"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MainAliRezaMain.FrontEnd.Pages"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1000">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF2848D1" Offset="1"/>
+                <GradientStop Color="#FFDDDDDD" Offset="0.67"/>
+                <GradientStop Color="#FF3451D1" Offset="0.978"/>
+                <GradientStop Color="#FF494BD2" Offset="0.987"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Image Source="/photo/ASUSS13.jpg" Width="122" Height="130" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="95,65,783,0"/>
+        <Button Content="show information" x:Name="showinformationbtn"  Width="150" HorizontalAlignment="Left" Margin="95" />
+        <Button Content="buy " x:Name="buybtn"   Width="150" HorizontalAlignment="Left" Margin="95,90,0,0" />
+        <Button Content="back" x:Name="backbtn" HorizontalAlignment="Left" VerticalAlignment="Bottom" Click="backbtn_Click" Margin="0,0,0,568"   />
+        <Grid Width="450" Height="600" HorizontalAlignment="Right" Margin="20">
+
+            <DataGrid x:Name="grdinformation1"  Height="150" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="name" Width="110" />
+                    <DataGridTextColumn Header="creator" Width="70" />
+                    <DataGridTextColumn Header="inventory status" Width="120"  />
+                    <DataGridTextColumn Header="color" Width="110"  />
+                    <DataGridTextColumn Header="rate" Width="80"  />
+                </DataGrid.Columns>
+            </DataGrid>
+            <Label HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,150">
+                explanation:
+            </Label>
+
+        </Grid>
+    </Grid>
+</UserControl>
